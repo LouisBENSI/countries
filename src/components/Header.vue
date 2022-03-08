@@ -1,7 +1,7 @@
 <template>
-  <header class="py-4 border-b border-solid border-gray-100 shadow-sm dark:bg-gray-800 dark:text-white">
-    <nav class="max-w-[1280px] mx-auto flex justify-between">
-      <p class="font-extrabold">
+  <header class="py-4 px-2 border-b border-solid border-gray-100 shadow-sm sm:px-4 lg:px-0 dark:bg-gray-800 dark:text-white">
+    <nav class="max-w-[1280px] w-full mx-auto flex items-center justify-between">
+      <p class="font-extrabold text-sm">
         Where in the world ?
       </p>
 

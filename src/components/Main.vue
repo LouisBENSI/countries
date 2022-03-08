@@ -1,14 +1,10 @@
 <template>
 
-  <main class="max-w-[1280px] mx-auto dark:bg-gray-800">
+  <main class="max-w-[1280px] px-4 mx-auto xl:px-0 dark:bg-gray-800">
 
-    <div class="flex justify-between mt-12">
-      <div>
-        <input @change="onChangeSearch()" v-model="search" type="text" class="h-[40px] w-[500px] pl-4 shadow rounded-md" placeholder="Rechercher un pays">
-      </div>
-
-      <div>
-        <select @change="onChange()" v-model="selected" class="mt-1 block w-full pl-3 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+    <div class="flex flex-col justify-between mt-12 md:flex-row">
+        <input @change="onChangeSearch()" v-model="search" type="text" class="w-full h-[40px] md:max-w-[500px] border-gray-300 pl-4  rounded-md md:mr-2" placeholder="Rechercher un pays">
+        <select @change="onChange()" v-model="selected" class="mt-1 block w-full pl-3 py-2 text-base border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm md:mt-0 md:ml-2 md:w-[300px]">
           <option disabled value="">Chosissez la région</option>
           <option value="africa">Afrique</option>
           <option value="americas">Amérique</option>
@@ -17,13 +13,12 @@
           <option value="oceania">Océanie</option>
           <option value="all">Toutes les régions</option>
         </select>
-      </div>
     </div>
 
     <!-- CONTAINER COUNTRIES -->
-    <div class="mt-12 md:flex md:flex-wrap justify-between">
+    <div class="mt-8 md:mt-12 md:flex md:flex-wrap md:justify-evenly lg:justify-between">
       <!-- COUNTRY -->
-      <div v-for="country in countries" :key="country.id" class="w-[275px] mb-12 rounded-md overflow-hidden shadow border border-solid border-gray-200">
+      <div v-for="country in countries" :key="country.id" class="w-full md:w-[275px] mb-12 rounded-md overflow-hidden shadow border border-solid border-gray-200">
         <!-- IMG -->
         <div class="bg-gray-400 h-48 w-full">
           <img :src="country.flags.svg" alt="" class="w-full h-full object-cover">
